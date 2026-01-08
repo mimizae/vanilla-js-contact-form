@@ -63,6 +63,7 @@ textarea {
   border-radius: 0.6rem;
   border: 1px solid var(--color-border-gray);
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  resize: vertical;
 }
 
 input::placeholder,
