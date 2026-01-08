@@ -4,13 +4,68 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>연락처 폼</title>
-    <link rel="icon" href="./images/contact-form.png" type="icon" />
+    <link rel="icon" href="./images/contact-form.png" type="image/png" />
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/theme.css" />
-    <link rel="stylesheet" href="./styles/common.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
     <script type="module" src="./main.js" defer></script>
   </head>
   <body>
-    연락처 폼 페이지입니다.
+    <main class="container">
+      <section class="contact">
+        <h1 class="contact-title">연락처 폼</h1>
+        <p class="contact-description">
+          모든 값을 형식에 맞게 입력해 주세요. ☺️
+        </p>
+
+        <form class="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">이름</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="이름을 입력하세요."
+              required
+              minlength="2"
+            />
+            <p class="error-message" id="name-error" aria-live="polite"></p>
+          </div>
+
+          <div class="form-group">
+            <label for="email">이메일</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="example@email.com"
+              required
+            />
+            <p class="error-message" id="email-error" aria-live="polite"></p>
+          </div>
+
+          <div class="form-group">
+            <label for="message">메시지</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="메시지를 입력하세요. (10자 이상)"
+              rows="5"
+              required
+              minlength="10"
+            ></textarea>
+            <p class="error-message" id="message-error" aria-live="polite"></p>
+          </div>
+
+          <button type="submit" class="submit-button">제출</button>
+
+          <p
+            class="success-message"
+            id="success-message"
+            aria-live="polite"
+          ></p>
+        </form>
+      </section>
+    </main>
   </body>
 </html>
