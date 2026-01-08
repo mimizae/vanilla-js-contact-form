@@ -173,7 +173,12 @@ textarea:focus {
   label {
     font-size: 1.3rem;
   }
+
   .error-message {
     font-size: 1.1rem;
+  }
+
+  .modal-content {
+    font-size: 1.6rem;
   }
 }
