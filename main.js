@@ -3,8 +3,9 @@ import {
   validateEmail,
   validateMessage,
 } from "./features/validation.js";
-import { showError, clearError } from "./features/error-message.js";
 import { updateSubmitState } from "./features/submit-state.js";
+import { showError, clearError } from "./features/error-message.js";
+import { showSuccessModal } from "./features/modal.js";
 
 const form = document.querySelector(".contact-form");
 const nameInput = document.getElementById("name");
@@ -43,8 +44,11 @@ function checkFormValidity() {
   });
 });
 
+updateSubmitState(false);
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+  showSuccessModal();
   form.reset();
   updateSubmitState(false);
 });
