@@ -85,13 +85,6 @@ textarea:focus {
   color: var(--color-error);
 }
 
-.success-message {
-  margin-top: 1rem;
-  font-size: 0.85rem;
-  color: var(--color-blue300);
-  text-align: center;
-}
-
 .submit-button {
   margin-top: 1.2rem;
   padding: 1.2rem;
