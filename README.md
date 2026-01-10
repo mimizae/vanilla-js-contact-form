@@ -68,7 +68,7 @@
 │   ├── theme.css          # 공통 테마 및 색상
 │   └── styles.css         # 메인 스타일
 ├── fonts
-│   └── woff2              # Pretendard 폰트 파일
+│   └── PretendardVariable.woff2   # Pretendard 폰트 파일
 └── images
     └── contact-form.png   # 프로젝트 파비콘
 ```
@@ -80,7 +80,7 @@
 1. 프로젝트를 클론하고 클론한 프로젝트로 이동합니다.
 
 ```
-git clone https://github.com/mimizae/vanilla-js-contact-form.git
+git clone <프로젝트 주소>
 cd vanilla-js-contact-form
 ```
 
@@ -98,17 +98,3 @@ cd vanilla-js-contact-form
 - 키보드 접근 및 포커스 스타일 지원
 
 <br/>
-
-## ✏️ 배운 점
-
-- 접근성을 고려한 폼 설계 방법
-- JavaScript 모듈화를 통한 코드 분리의 중요성
-- 실시간 폼 유효성 검사의 UX 효과
-
-<br/>
-
-## 📌 개선 아이디어
-
-- 서버 연동을 통한 실제 메시지 전송 기능
-- 다국어(i18n) 지원
-- 애니메이션을 활용한 성공/오류 피드백 강화
