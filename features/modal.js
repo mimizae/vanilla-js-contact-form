@@ -3,7 +3,7 @@ export function showSuccessModal() {
   modal.className = "success-modal";
 
   modal.innerHTML = `
-    <div class="modal-content" role="dialog" aria-live="polite">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-live="polite">
       <p>제출이 완료되었습니다! 🎉</p>
     </div>
   `;
