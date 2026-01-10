@@ -8,41 +8,47 @@ import { showError, clearError } from "./features/error-message.js";
 import { showSuccessModal } from "./features/modal.js";
 
 const form = document.querySelector(".contact-form");
-const nameInput = document.getElementById("name");
-const emailInput = document.getElementById("email");
-const messageInput = document.getElementById("message");
+
+const formFields = {
+  name: {
+    element: document.getElementById("name"),
+    validate: validateName,
+    errorId: "name-error",
+    errorMessage: "이름은 2자 이상 입력해 주세요.",
+  },
+  email: {
+    element: document.getElementById("email"),
+    validate: validateEmail,
+    errorId: "email-error",
+    errorMessage: "유효한 이메일을 입력해 주세요.",
+  },
+  message: {
+    element: document.getElementById("message"),
+    validate: validateMessage,
+    errorId: "message-error",
+    errorMessage: "메시지는 10자 이상 입력해 주세요.",
+  },
+};
 
 function checkFormValidity() {
-  const isNameValid = validateName(nameInput.value);
-  const isEmailValid = validateEmail(emailInput.value);
-  const isMessageValid = validateMessage(messageInput.value);
+  const isFormValid = Object.values(formFields).every(({ element, validate }) =>
+    validate(element.value)
+  );
 
-  updateSubmitState(isNameValid && isEmailValid && isMessageValid);
+  updateSubmitState(isFormValid);
 }
 
-[nameInput, emailInput, messageInput].forEach((input) => {
-  input.addEventListener("input", () => {
-    if (input === nameInput) {
-      validateName(input.value)
-        ? clearError("name-error")
-        : showError("name-error", "이름은 2자 이상 입력해 주세요.");
-    }
+Object.values(formFields).forEach(
+  ({ element, validate, errorId, errorMessage }) => {
+    element.addEventListener("input", () => {
+      validate(element.value)
+        ? clearError(errorId)
+        : showError(errorId, errorMessage);
 
-    if (input === emailInput) {
-      validateEmail(input.value)
-        ? clearError("email-error")
-        : showError("email-error", "유효한 이메일을 입력해 주세요.");
-    }
-
-    if (input === messageInput) {
-      validateMessage(input.value)
-        ? clearError("message-error")
-        : showError("message-error", "메시지는 10자 이상 입력해 주세요.");
-    }
-
-    checkFormValidity();
-  });
-});
+      checkFormValidity();
+    });
+  }
+);
 
 updateSubmitState(false);
 
