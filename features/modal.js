@@ -22,5 +22,5 @@ export function showSuccessModal() {
       },
       { once: true }
     );
-  }, 3000);
+  }, 2500);
 }
