@@ -113,6 +113,6 @@ cd vanilla-js-contact-form
 
 ## 📋 ETC
 
-연락처 폼 프로젝트 구현
+[연락처 폼 프로젝트 구현](https://discovered-muskox-349.notion.site/2e2e36bc38f4804485a4fd79ae5d9e61?source=copy_link)
 <br/>
 이 프로젝트를 처음부터 구현하며 코드 컨벤션 설정 과정과 각 기능을 어떤 기준으로 설계하고 구현했는지를 정리한 문서입니다.
