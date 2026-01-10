@@ -103,12 +103,18 @@ cd vanilla-js-contact-form
 
 ### 2️⃣ zip 파일로 전달받은 경우
 
-1. 전달 받은 zip 파일의 압축을 해제합니다.
-2. 압축 해제된 폴더에서 `index.html` 파일을 웹 브라우저로 엽니다.
-3. 이름, 이메일, 메시지를 입력 후 **제출** 버튼을 클릭합니다.
-   <br/>
+1. 전달 받은 `vanilla-js-contact-form.zip` 파일의 압축을 해제합니다.
+2. 압축 해제된 폴더를 VS Code로 엽니다.
+3. 아래의 방법으로 로컬 서버를 실행합니다.
 
-> 별도의 서버나 빌드 과정 없이 바로 실행 가능합니다!
+#### 방법 A. VS Code Live Server 사용
+
+- `index.html` 파일을 우클릭
+- **Open with Live Server** 선택
+
+<br/>
+
+## ✨ 접근성 고려 사항
 
 <br/>
 
